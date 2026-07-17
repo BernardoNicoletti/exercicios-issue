@@ -36,7 +36,7 @@ public class Ex3 {
 
 		Scanner input = new Scanner(System.in);
 
-		System.out.print("Digite um dia da semana para calcular a media diaria");
+		System.out.print("Digite um dia da semana para calcular a média diária: ");
 		String diaEscolhido = input.next();
 		int indiceDia = 0;
 
@@ -52,17 +52,17 @@ public class Ex3 {
 			soma += temperaturas[indiceDia][i];
 		}
 		double mediaDia = soma / 24;
-		System.out.println("Media de " + diaEscolhido + ": " + mediaDia);
+		System.out.println("Média de " + diaEscolhido + ": " + mediaDia);
 
-		System.out.print("Digite a hora para calcular a media da temperatura atraves dos dias");
+		System.out.print("Digite a hora para calcular a média da temperatura através dos dias: ");
 		int hora = input.nextInt();
 
 		soma = 0;
 		for (int i = 0; i < 7; i++) {
-			soma += temperaturas[hora][i];
+			soma += temperaturas[i][hora];
 		}
 		double mediaHora = soma / 7;
-		System.out.println("Media da temperatura as " + hora + " horas: " + mediaHora);
+		System.out.println("Média da temperatura às " + hora + " horas: " + mediaHora);
 
 	}
 }
